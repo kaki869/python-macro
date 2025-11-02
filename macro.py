@@ -67,7 +67,7 @@ def detect_trigger():
     def on_mouse_click(x, y, button, pressed):
         nonlocal trigger_key, trigger_type
         if pressed and trigger_key is None:
-            trigger_key = button
+            trigger_key = "button"
             trigger_type = "mouse"
             return False
 
@@ -88,10 +88,6 @@ def detect_trigger():
 
     time.sleep(0.3)
     return trigger_key, trigger_type
-
-# ========== MAIN MACRO EXECUTION ==========
-print("[*] Launching Macro...")
-print("[*] Loading Macro...")
 
 trigger_key, trigger_type = detect_trigger()
 cps = float(input("Clicks per second: "))
@@ -133,7 +129,7 @@ try:
                 time.sleep(0.01)
 
 except KeyboardInterrupt:
-    print("Macro stopped by user")
+    pass
 finally:
     try:
         key_listener.stop()
