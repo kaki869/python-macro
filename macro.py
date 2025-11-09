@@ -1,29 +1,6 @@
-import random
-import string
-import os
-import subprocess
-import sys
-import json
-import urllib.request
-import re
-import base64
-import datetime
-import shutil
-import sqlite3
-import requests
-import tempfile
-import platform
-import psutil
-import cpuinfo
-import GPUtil
-import socket
-import getpass
-import threading
+import ctypes
 import time
 import keyboard
-import ctypes
-import win32crypt
-from Crypto.Cipher import AES
 from pynput import mouse, keyboard as pynput_keyboard
 
 PUL = ctypes.POINTER(ctypes.c_ulong)
